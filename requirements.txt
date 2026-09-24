@@ -1,0 +1,5 @@
+aiohttp
+aiofiles
+# ffmpeg 缺失时由 dynamic_import_pkg 按需安装 imageio-ffmpeg
+# 可选：DIRECT_MODE=dashscope 时取消下一行注释
+# dashscope

@@ -1,0 +1,34 @@
+[project]
+name = "nekro-plugin-video"
+version = "0.1.0"
+description = "Agent 自调用的 NA 原生视频理解工具"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+dashscope = ["dashscope==1.24.0"]
+dev = [
+  "poethepoet==0.37.0", "ruff==0.12.12", "pytest==8.4.2",
+  "pydantic==2.11.7", "httpx[socks]==0.27.2", "openai==1.107.0",
+  "aiohttp==3.12.15", "aiofiles==24.1.0", "Pillow==11.3.0", "imageio-ffmpeg==0.6.0",
+]
+
+[build-system]
+requires = ["setuptools==80.9.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["nekro_plugin_video"]
+
+[tool.setuptools.package-dir]
+nekro_plugin_video = "."
+
+[tool.poe.tasks]
+lint = "ruff check ."
+test = "pytest -q tests"
+
+[tool.ruff]
+target-version = "py310"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

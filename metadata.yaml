@@ -1,0 +1,12 @@
+name: nekro_plugin_video
+display_name: 视频理解
+desc: Agent 自调用的视频分析工具：支持沙盒视频、QQ 视频消息回查、B站与视频直链，抽帧后由视觉模型总结。
+version: 0.1.0
+author: F1yCar
+repo: https://github.com/exynos967/astrbot_zssm_explain
+runtime: nekro_agent
+support_adapter:
+  - onebot_v11
+  - sse
+  - telegram
+  - discord
